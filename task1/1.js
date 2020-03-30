@@ -12,18 +12,19 @@ let appData = {
     savings: false,
 };
 
+// for (let i = 1; i < 3; i++) {
+//     let question1 = prompt("Введите обязательную статью расходов в этом месяце", "");
+//     let question2 = prompt("Во сколько обойдется?", "");
+//     appData.expenses[question1] = question2;
+// }
 
-let question1_1 = prompt("Введите обязательную статью расходов в этом месяце", "");
-let question1_2 = prompt("Во сколько обойдется?", "");
-
-appData.expenses[question1_1] = question1_2;
-
-
-let question2_1 = prompt("Введите обязательную статью расходов в этом месяце", "");
-let question2_2 = prompt("Во сколько обойдется?", "");
-
-appData.expenses[question2_1] = question2_2;
-
+let i = 1;
+while (i < 3) {
+    let question1 = prompt("Введите обязательную статью расходов в этом месяце", "");
+    let question2 = prompt("Во сколько обойдется?", "");
+    appData.expenses[question1] = question2;
+    i++;
+}
 
 alert(`бюджет на 1 день ${appData.cash / 30} руб.`);
 
