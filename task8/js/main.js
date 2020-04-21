@@ -106,11 +106,11 @@ countBtn.addEventListener("click", function () {
         appData.moneyPerDay = ((appData.budget - appData.expensesSum) / 30).toFixed(2);
         dayBudgetValue.textContent = appData.moneyPerDay;
 
-        if (appData.moneyPerDay < 367) {
+        if (appData.moneyPerDay <= 367) {
             levelValue.textContent = "Минимальный уровень достатка";
         } else if (appData.moneyPerDay > 367 && appData.moneyPerDay < 567) {
             levelValue.textContent = "Средний класс";
-        } else if (appData.moneyPerDay > 567) {
+        } else if (appData.moneyPerDay >= 567) {
             levelValue.textContent = "Олигарх";
         } else {
             levelValue.textContent = "Ошибка!";
